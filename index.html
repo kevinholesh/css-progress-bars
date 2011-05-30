@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 Progress Bars</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function() {
+      
+      // Add the animated stripe (so it doesn't clutter up the beautiful HTML)
+      $('.completion').append('<span class="zebra">|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</span>')
+      
+      
+      // Fake some progress bar action
+      setTimeout(function() {
+        $('.green.progress-bar .completion').css('width', '20%').find('strong').html('20%')
+      },1000);
+      
+      setTimeout(function() {
+        $('.green.progress-bar .completion').css('width', '50%').find('strong').html('50%')
+      },3000);
+      
+      setTimeout(function() {
+        $('.green.progress-bar .completion').css('width', '90%').find('strong').html('90%')
+      },5000);
+      
+      setTimeout(function() {
+        $('.green.progress-bar .completion').css('width', '100%').find('strong').html('100%')
+        $('.green.progress-bar .completion .zebra').remove()
+      },7000);
+    });
+	</script>
+</head>
+<body>
+	<div id="container">
+	  
+		<h1>CSS3 Progress Bars</h1>
+		<div id="bars-container">
+			<div class="blue progress-bar">
+			  <div class="completion" style="width:100%"><strong>100%</strong></div>
+			</div>
+			<div class="orange progress-bar alt">
+			  <div class="completion" style="width:40%"><strong>40%</strong></div>
+			</div>
+			<div class="green progress-bar">
+			  <div class="completion" style="width:10%"><strong>10%</strong></div>
+			</div>
+			<div class="pink progress-bar alt">
+			  <div class="completion" style="width:70%"><strong>70%</strong></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<p>These progress bars were created by <a href="http://galengidman.com/">Galen Gidman</a> using no images what-so-ever... just CSS3.</p>
+		
+		<p>The animation was added by <a href="http://kevinholesh.com">Kevin Holesh</a>.</p>
+		
+		
+		<h3><a href="http://galengidman.com/downloads/progress-bars.zip">Download Source</a> / <a href="http://galengidman.com/2010/12/20/css3-progress-bars/">Read More</a></h3>
+	</div>
+</div>
+</body>
+</html>
