@@ -12,7 +12,7 @@ work. Feel free to ignore it.
 
 */
 
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif);*{margin:0;padding:0}body{width:640px;margin:auto;padding:100px 0 50px 0;background:url(body-bg.png) #222}#container{font:16px/24px 'Droid Serif',Georgia,serif;text-align:center;color:#fff;text-shadow:0 1px 0 #000}h1{font-size:36px;line-height:36px}h3{margin-top:50px}a{color:#fff}#bars-container{margin:50px 0}.progress-bar{float:left;margin:10px 0}.alt{float:right}.clear{clear:both}
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);*{margin:0;padding:0}body{width:640px;margin:auto;padding:100px 0 50px 0;background:url(body-bg.png) #222}#container{font:16px/24px 'Droid Serif',Georgia,serif;text-align:center;color:#fff;text-shadow:0 1px 0 #000}h1{font-size:36px;line-height:36px}h3{font-size:18px;margin-top:50px}a{color:#fff}#bars-container{margin:50px 0}.progress-bar{float:left;margin:10px 0}.alt{float:right}.clear{clear:both}
 
 
 /* progress bar base */
