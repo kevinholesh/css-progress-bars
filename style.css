@@ -1,0 +1,138 @@
+/************
+Animated CSS progress bars based on Galen Gidman's work (http://galengidman.com/2010/12/20/css3-progress-bars)
+
+c[~] Kevin Holesh (me@kevinholesh.com)
+************/
+
+/* 
+
+This is just some code to make the page look nice, but
+it's not at all essential to making the progress bars
+work. Feel free to ignore it.
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);*{margin:0;padding:0}body{width:640px;margin:auto;padding:100px 0 50px 0;background:url(body-bg.png) #222}#container{font:16px/24px 'Droid Serif',Georgia,serif;text-align:center;color:#fff;text-shadow:0 1px 0 #000}h1{font-size:36px;line-height:36px}h3{font-size:18px;margin-top:50px}a{color:#fff}#bars-container{margin:50px 0}.progress-bar{float:left;margin:10px 0}.alt{float:right}.clear{clear:both}
+
+
+/* progress bar base */
+.progress-bar {
+  background-color: #191919;
+  border-radius: 16px;
+  padding: 4px;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 24px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  -webkit-box-shadow: inset 0 1px 2px #000, 0 1px 0 #2b2b2b;
+  -moz-box-shadow: inset 0 1px 2px #000, 0 1px 0 #2b2b2b;
+  box-shadow: inset 0 1px 2px #000, 0 1px 0 #2b2b2b;
+}
+
+/* code for the inner (colorful) part of the bar */
+.progress-bar .completion {
+  background: #999;
+  display: block;
+  font: bold 16px/24px sans-serif;
+  position: absolute;
+  overflow: hidden;
+  max-width: 97.5% !important; /* Prevent a full bar from overflowing */
+  height: 24px;
+  text-indent: -9999px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 3px rgba(0, 0, 0, 0.4),
+    0 1px 1px #000;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 3px rgba(0, 0, 0, 0.4),
+    0 1px 1px #000;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 
+   inset 0 -1px 3px rgba(0, 0, 0, 0.4), 
+   0 1px 1px #000;
+  -webkit-transition: width 0.3s linear;
+  -moz-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+}
+
+@-webkit-keyframes scrollin {
+	0% { left: 0; }
+	100% { left: -84px; } 
+}
+@-moz-keyframes scrollin {
+	0% { left: 0; }
+	100% { left: -84px; } 
+}
+@keyframes scrollin {
+	0% { left: 0; }
+	100% { left: -84px; } 
+}
+
+/* code to stripe the bars */
+.progress-bar .completion .zebra {
+  color: #000;
+  font: normal 120px/80px sans-serif;
+  letter-spacing: -10px;
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 300%;
+  height: 24px;
+  opacity: 0.06;
+  overflow: hidden;
+  text-align: left;
+  text-indent: 0;
+  z-index: 150;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-transform: skewX(-30deg);
+  -moz-transform: skewX(-30deg);
+  -o-transform: skewX(-30deg);
+  transform: skewX(-30deg);
+  
+  -webkit-animation-name: scrollin; 
+  -webkit-animation-duration: 3.2s; 
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  
+  /* Doesn't work in FF yet. Will in version 5.0 */
+  -moz-animation-name: scrollin; 
+  -moz-animation-duration: 3.2s; 
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  animation-name: scrollin; 
+  animation-duration: 3.2s; 
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+/* code for the colors */
+.blue .completion { 
+  background: #099;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#099), to(#006A6B));
+  background: -moz-linear-gradient(top, #099, #006A6B);
+}
+
+.pink .completion { 
+  background: #f09;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f36), to(#AC2246));
+  background: -moz-linear-gradient(top, #f36, #AC2246);
+}
+
+.green .completion { 
+  background: #7EBD01;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7EBD01), to(#568201));
+  background: -moz-linear-gradient(top, #7EBD01, #568201);
+}
+
+.orange .completion { 
+  background: #f90;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f90), to(#f60));
+  background: -moz-linear-gradient(top, #f90, #f60);
+}
