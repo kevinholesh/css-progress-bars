@@ -135,4 +135,5 @@ work. Feel free to ignore it.
   background: #f90;
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f90), to(#f60));
   background: -moz-linear-gradient(top, #f90, #f60);
+  text-indent: 0;
 }
