@@ -16,5 +16,6 @@ TODO
 ---------
 * Cross-browser test the hell out of it
 * Make a better jQuery function for updating the completion
-* Test with a screenreader
 * Better "finished" state. It looks awkward now.
+* Another simpler theme. Basic colors and no fancy gradient.
+* Test with a screenreader
