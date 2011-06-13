@@ -60,40 +60,41 @@ work. Feel free to ignore it.
 }
 
 @-webkit-keyframes scrollin {
-	0% { left: 0; }
-	100% { left: -84px; } 
+	0% { left: -20px; }
+	100% { left: -92px; } 
 }
 @-moz-keyframes scrollin {
-	0% { left: 0; }
-	100% { left: -84px; } 
+  0% { left: -20px; }
+	100% { left: -92px; }
 }
 @keyframes scrollin {
-	0% { left: 0; }
-	100% { left: -84px; } 
+  0% { left: -20px; }
+	100% { left: -92px; }
 }
 
 /* code to stripe the bars */
 .progress-bar .completion .zebra {
-  color: #000;
+  color: black;
   font: normal 120px/80px sans-serif;
-  letter-spacing: -10px;
+  letter-spacing: -15px;
   display: block;
   position: absolute;
   top: 0;
+  left: -20px;
   width: 300%;
   height: 24px;
   opacity: 0.06;
   overflow: hidden;
   text-align: left;
   text-indent: 0;
-  z-index: 150;
+  z-index: 1;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
-  -webkit-transform: skewX(-30deg);
-  -moz-transform: skewX(-30deg);
-  -o-transform: skewX(-30deg);
-  transform: skewX(-30deg);
+  -webkit-transform: skewX(-10deg);
+  -moz-transform: skewX(-10deg);
+  -o-transform: skewX(-10deg);
+  transform: skewX(-10deg);
   
   -webkit-animation-name: scrollin; 
   -webkit-animation-duration: 3.2s; 
@@ -109,6 +110,9 @@ work. Feel free to ignore it.
   animation-duration: 3.2s; 
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  
+  /* I hate doing it, but I need it or the HTML gets very complex */
+  filter: alpha(opacity = 06);
 }
 
 
